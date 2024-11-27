@@ -1,0 +1,145 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Navbar styling */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #333;
+    color: #fff;
+}
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+  
+.navbar-menu li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+  
+  .navbar-menu li a:hover {
+    color: #f0a500;
+  }
+  
+  /* sidenav styling */
+  .sidenav {
+    width: 25%;
+    height: 400px;
+    border: none;
+    background-color: #ffffff;
+}
+
+.sidenav h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sidenav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.sidenav ul li {
+    margin: 15px 0;
+}
+
+.sidenav ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.sidenav ul li a:hover {
+    color: #ffffff;
+}
+  /* Main content styling */
+  main {
+    padding: 20px;
+  }
+  
+  section {
+    margin-bottom: 20px;
+  }
+  
+  /* Toggle button for sidenav */
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+  
+  .navbar-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+    }
+  
+    .navbar-toggle {
+      display: flex;
+    }
+  
+    .sidenav {
+      width: 200px;
+    }
+  }
+  
+       /* CSS untuk Background Papan Tulis */
+       body {
+        background-color: #f0efe9;
+        background-image: url('https://www.transparenttextures.com/patterns/blackboard.png');
+        color: #333;
+        font-family: Arial, sans-serif;
+    }
+    /* CSS untuk Navbar */
+    nav {
+        background-color: #333;
+        padding: 10px;
+        text-align: center;
+    }
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    nav a:hover {
+        color: #00bfff;
+    }
+    /* CSS untuk Konten */
+    #content {
+        padding: 20px;
+        background-color: #ffffff;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    /* CSS untuk Footer */
+    footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+    }

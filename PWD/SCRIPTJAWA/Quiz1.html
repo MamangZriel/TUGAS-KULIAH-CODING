@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitung Komisi Salesman</title>
+</head>
+<body>
+  <h1>Hitung Komisi Salesman</h1>
+  <form id="salesForm">
+    <label for="pendapatan">Pendapatan Penjualan (Rp):</label>
+    <input type="number" id="pendapatan" required>
+    <button type="button" onclick="hitungKomisi()">Hitung Komisi</button>
+  </form>
+  
+  <h2>Hasil</h2>
+  <p id="hasil"></p>
+
+  <script>
+    
+function hitungKomisi() {
+    const pendapatan = parseFloat(document.getElementById('pendapatan').value);
+    let uangJasa = 0;
+    let komisi = 0;
+
+    if (pendapatan <= 200000) {
+    uangJasa = 10000;
+    komisi = 0.1 * pendapatan;
+    } else if (pendapatan <= 500000) {
+    uangJasa = 20000;
+    komisi = 0.15 * pendapatan;
+    } else {
+    uangJasa = 30000;
+    komisi = 0.2 * pendapatan;
+}
+
+    const total = uangJasa + komisi;
+
+    document.getElementById('hasil').innerText = 
+`Pendapatan: Rp ${pendapatan.toLocaleString()}
+    \nUang Jasa: Rp ${uangJasa.toLocaleString()}
+    \nKomisi: Rp ${komisi.toLocaleString()}
+    \nTotal Pendapatan: Rp ${total.toLocaleString()}`;
+}
+  </script>
+</body>
+</html>
